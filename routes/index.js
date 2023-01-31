@@ -45,7 +45,7 @@ router.post('/api/user/register', // Registration validation (task 4)
                 password: hash
               }, (err, ok) => {
                 if (err) throw err;
-                res.redirect("/login"); //added for week 10 task 1
+                res.redirect("/login.html"); //added for week 10 task 1
                 //return res.sendStatus(200);
               }
             )
@@ -125,11 +125,11 @@ router.post('/api/todos', validateToken, (req, res) => {
 // Week 10
 
 // Task 1
-router.get('/register', function (req, res, next) {
+router.get('/register.html', function (req, res, next) {
   res.render('register');
 });
 
-router.get('/login', function (req, res, next) {
+router.get('/login.html', function (req, res, next) {
   res.render('login');
 });
 
